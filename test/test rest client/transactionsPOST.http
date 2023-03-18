@@ -1,0 +1,12 @@
+POST http://localhost:3000/transactions HTTP/1.1
+content-type: application/json
+
+{
+    "amount": "100.00",
+    "description": "Smartband XYZ 3.0",
+    "payment_method": "debit_card",
+    "card_number": "1234-6534-7896-0987",
+    "card_holder_name": "Vernanda",
+    "card_expire_date": "07/2023",
+    "card_security_code": "123"
+}
