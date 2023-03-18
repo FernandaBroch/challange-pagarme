@@ -19,20 +19,4 @@ const transactionInit = async (sequelize) => {
   }, { sequelize, modelName: 'transaction' });
 }
 
-const createTransaction = async (amount, description, payment_method, card_number, card_holder_name, card_expire_date, card_security_code) => {
-  return await Transaction.create({
-    amount: amount,
-    description: description,
-    payment_method: payment_method,
-    card_number: card_number,
-    card_holder_name: card_holder_name,
-    card_expire_date: card_expire_date,
-    card_security_code: card_security_code,
-  }).catch(error => console.log(error));
-}
-
-const readTransactions = async () => {
-  return await Transaction.findAll();
-}
-
-module.exports = { transactionInit, readTransactions, createTransaction };
+module.exports = { Transaction, transactionInit };
